@@ -1,4 +1,4 @@
-import { Dimensions, Image, StyleSheet } from "react-native";
+import { Dimensions, Image, Pressable, StyleSheet } from "react-native";
 
 const { width } = Dimensions.get("window");
 const ratio = 228 / 362;
@@ -41,8 +41,13 @@ export const cards = [
 
 interface CardProps {
   card: Cards;
+  onPress?: () => void;
 }
 
-export const Card = ({ card }: CardProps) => {
-  return <Image style={styles.card} source={assets[card]} />;
+export const Card = ({ card, onPress }: CardProps) => {
+  return (
+    <Pressable onPress={onPress}>
+      <Image style={styles.card} source={assets[card]} />
+    </Pressable>
+  );
 };

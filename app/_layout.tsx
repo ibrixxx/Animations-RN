@@ -50,6 +50,13 @@ export default function RootLayout() {
             }}
           />
           <Drawer.Screen
+            name="transition"
+            options={{
+              drawerLabel: "🚅 Transition",
+              title: "🚅 Transition",
+            }}
+          />
+          <Drawer.Screen
             name="+not-found"
             options={{
               drawerLabel: () => null,
