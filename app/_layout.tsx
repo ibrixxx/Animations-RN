@@ -57,10 +57,10 @@ export default function RootLayout() {
             }}
           />
           <Drawer.Screen
-            name="+not-found"
+            name="pauseable-animation"
             options={{
-              drawerLabel: () => null,
-              title: undefined,
+              drawerLabel: "⏯️ Pauseable",
+              title: "⏯️ Pauseable",
             }}
           />
         </Drawer>
