@@ -3,8 +3,8 @@ import { ThemedView } from "@/components/ThemedView";
 import { useState } from "react";
 import { useSpring } from "react-native-redash";
 import { StyleSheet } from "react-native";
-import { cards } from "@/components/Card";
-import AnimatedTransitionCard from "@/components/AnimatedTransitionCard";
+import { cards } from "@/components/card/Card";
+import AnimatedTransitionCard from "@/components/card/AnimatedTransitionCard";
 // import {
 //   useDerivedValue,
 //   useSharedValue,

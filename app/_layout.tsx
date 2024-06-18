@@ -63,6 +63,13 @@ export default function RootLayout() {
               title: "⏯️ Pauseable",
             }}
           />
+          <Drawer.Screen
+            name="circular-slider"
+            options={{
+              drawerLabel: "🌀 Circular Slider",
+              title: "🌀 Circular Slider",
+            }}
+          />
         </Drawer>
       </GestureHandlerRootView>
     </ThemeProvider>

@@ -3,7 +3,7 @@ import Animated, { useAnimatedStyle } from "react-native-reanimated";
 import { Card, Cards } from "./Card";
 import { mix } from "react-native-redash";
 import { Dimensions, StyleSheet } from "react-native";
-import { StyleGuide } from "./style/StyleGuide";
+import { StyleGuide } from "../style/StyleGuide";
 
 const { width } = Dimensions.get("window");
 const origin = -(width / 2 - StyleGuide.spacing * 2);

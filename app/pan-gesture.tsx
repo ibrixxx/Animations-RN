@@ -7,7 +7,7 @@ import Animated, {
   useSharedValue,
   withDecay,
 } from "react-native-reanimated";
-import { CARD_HEIGHT, CARD_WIDTH, Card, Cards } from "@/components/Card";
+import { CARD_HEIGHT, CARD_WIDTH, Card, Cards } from "@/components/card/Card";
 import { clamp, withBouncing } from "react-native-redash";
 import { useHeaderHeight } from "@react-navigation/elements";
 
