@@ -7,7 +7,13 @@ const Routing = () => {
   return (
     <Drawer
       screenOptions={{
+        drawerActiveTintColor: Colors[theme ?? "light"].text,
+        drawerInactiveTintColor: Colors[theme ?? "light"].tint,
+        headerTintColor: Colors[theme ?? "light"].tint,
         drawerStyle: {
+          backgroundColor: Colors[theme ?? "light"].background,
+        },
+        headerStyle: {
           backgroundColor: Colors[theme ?? "light"].background,
         },
       }}

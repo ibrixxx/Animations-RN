@@ -12,6 +12,8 @@ import {
 } from "react-native-reanimated";
 import { getPointAtLength, parsePath } from "@/helpers/AnimatedHelpers";
 import * as shape from "d3-shape";
+import { useTheme } from "@/hooks/useTheme";
+import { Colors } from "@/constants/Colors";
 const { width } = Dimensions.get("window");
 const height = width;
 const data: [number, number][] = [
@@ -51,6 +53,7 @@ const d = shape
 const path = parsePath(d);
 
 const GraphScreen = () => {
+  const { theme } = useTheme();
   const length = useSharedValue(0);
   const point = useDerivedValue(() => {
     const p = getPointAtLength(path, length.value);
@@ -73,14 +76,27 @@ const GraphScreen = () => {
         <Svg {...{ width, height }}>
           <Defs>
             <LinearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="gradient">
-              <Stop stopColor="#CDE3F8" offset="0%" />
-              <Stop stopColor="#eef6fd" offset="80%" />
-              <Stop stopColor="#FEFFFF" offset="100%" />
+              <Stop
+                stopColor={theme === "dark" ? "#040533" : "#CDE3F8"}
+                offset="0%"
+              />
+              <Stop
+                stopColor={theme === "dark" ? "#023040" : "#eef6fd"}
+                offset="80%"
+              />
+              <Stop
+                stopColor={
+                  theme === "dark"
+                    ? Colors[theme ?? "light"].background
+                    : "#FEFFFF"
+                }
+                offset="100%"
+              />
             </LinearGradient>
           </Defs>
           <Path
             fill="transparent"
-            stroke="#367be2"
+            stroke={theme === "dark" ? "lightgray" : "#367be2"}
             strokeWidth={5}
             {...{ d }}
           />

@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     height: CURSOR,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(100, 200, 300, 0.4)",
   },
   cursor: {
     width: 30,
